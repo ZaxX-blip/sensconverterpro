@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SANS Converter Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+  
+<div class="ad-banner top">Publicité en haut</div>
+<div class="container">
+
+  <div id="langSwitch">
+    <button onclick="setLanguage('fr')">FR</button>
+    <button onclick="setLanguage('en')">EN</button>
+  </div>
+
+  <h1>Sens Converter Pro</h1>
+
+  <label for="fromGame">Jeu d'origine</label>
+  <select id="fromGame">
+    <option value="valorant">Valorant</option>
+    <option value="cs2">CS2</option>
+    <option value="fortnite">Fortnite</option>
+    <option value="overwatch2">Overwatch 2</option>
+    <option value="apex">Apex Legends</option>
+    <option value="r6">Rainbow Six Siege</option>
+    <option value="pubg">PUBG</option>
+  </select>
+
+  <label for="fromSens">Sensibilité</label>
+  <input type="number" id="fromSens" placeholder="Ex: 0.35">
+
+  <label for="dpi">DPI</label>
+  <input type="number" id="dpi" placeholder="Ex: 800">
+
+  <label for="toGame">Convertir vers</label>
+  <select id="toGame">
+    <option value="valorant">Valorant</option>
+    <option value="cs2">CS2</option>
+    <option value="fortnite">Fortnite</option>
+    <option value="overwatch2">Overwatch 2</option>
+    <option value="apex">Apex Legends</option>
+    <option value="r6">Rainbow Six Siege</option>
+    <option value="pubg">PUBG</option>
+  </select>
+
+  <button class="btn-main" onclick="convert()">Convertir</button>
+
+  <h2 id="result"></h2>
+
+  <button class="btn-secondary" onclick="copySens()">Copier la sensi</button>
+
+  <div class="pro-settings">
+    <label>Pro</label>
+    <select id="proPlayer" onchange="loadProSettings()">
+      <option value="">--</option>
+      <option value="tenz">TenZ (Valorant)</option>
+      <option value="scream">ScreaM (Valorant)</option>
+      <option value="zywoo">ZywOo (CS2)</option>
+      <option value="s1mple">s1mple (CS2)</option>
+      <option value="aceu">Aceu (Apex)</option>
+      <option value="mendo">Mendo (Apex)</option>
+      <option value="super">Super (OW2)</option>
+      <option value="pengu">Pengu (R6)</option>
+      <option value="ibiza">Ibiza (PUBG)</option>
+      <option value="mongraal">Mongraal (Fortnite)</option>
+      <option value="benjyfishy">Benjyfishy (Fortnite)</option>
+      <option value="mrsavage">MrSavage (Fortnite)</option>
+      <option value="clix">Clix (Fortnite)</option>
+      <option value="bugha">Bugha (Fortnite)</option>
+      <option value="tfue">Tfue (Fortnite)</option>
+    </select>
+
+    <button class="btn-mini" onclick="applyProSens()">Sens</button>
+    <button class="btn-mini" onclick="applyProDpi()">DPI</button>
+  </div>
+
+  <div id="proInfo"></div>
+
+</div>
+<div class="ad-banner bottom">Publicité en bas</div>
+
+<script src="app.js"></script>
+</body>
+</html>
