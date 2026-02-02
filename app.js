@@ -57,7 +57,7 @@ const ratios = {
   overwatch2: 12.2,
   apex: 3.1818,
   r6: 12,
-  pubg: 0.0025
+  pubg: 50
 };
 
 /* ------------------ PRO SETTINGS ------------------ */
